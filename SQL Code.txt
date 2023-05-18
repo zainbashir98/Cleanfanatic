@@ -1,0 +1,76 @@
+CREATE DATABASE cf;
+
+CREATE TABLE admin_login
+(
+	id int(6) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    username varchar(50),
+    password varchar(50)
+)
+
+INSERT INTO `admin_login`(`username`, `password`) VALUES ('admin','meow')
+
+CREATE TABLE newsletter_emails
+(
+	id int(6) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    email varchar(50) 
+)
+
+CREATE TABLE gallery
+(
+	id int(6) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    image_path varchar(50) 
+)
+
+CREATE TABLE news
+(
+	id int(6) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    post_news varchar(50) 
+)
+
+CREATE TABLE staff(
+	id int(6) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    first_name varchar(50) NOT NULL,
+    last_name varchar(50) NOT NULL,
+    username varchar(50) NOT NULL,
+    password varchar(50) NOT NULL,
+    gender varchar(50) NOT NULL,
+    dp_path varchar(50) NOT NULL,
+    email varchar(50) NOT NULL,
+    status varchar(50) NOT NULL,
+    dob date NOT NULL,
+    phone varchar(50) NOT NULL
+)
+CREATE TABLE orders (
+order_id int(6) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+id int(6),
+order_from varchar(50),
+address varchar(90),
+charges int(6),
+payment varchar(100),
+services Varchar(50),
+date DATE,
+status varchar(50)
+)
+
+
+CREATE TABLE customer(
+	id int(6) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    first_name varchar(50),
+    last_name varchar(50),
+    username varchar(50),
+    gender varchar(50),
+    dp_path varchar(50),
+    email varchar(50),
+    feedback varchar(50),
+    phone int(6),
+    address varchar(70)
+    
+)
+CREATE TABLE email
+(
+id int(6) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+name varchar(50) NOT NULL,
+email varchar(50) NOT NULL,
+message varchar(50) NOT NULL
+)
+
